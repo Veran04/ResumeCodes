@@ -1,0 +1,12 @@
+f(a) : function(int) -> int {
+  return a + 2;
+}
+
+main {
+  int x;
+  x = 7 * f(3);
+  x = x - 1;
+  x = x / 6;
+  x = x % 3;
+  return x;
+}

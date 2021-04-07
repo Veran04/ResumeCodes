@@ -1,0 +1,107 @@
+import java.util.ListIterator;
+import java.util.Random;
+import java.util.concurrent.Semaphore;
+
+
+public class Elf implements Runnable {
+
+	enum ElfState {
+		WORKING, TROUBLE, AT_SANTAS_DOOR
+	};
+
+	private ElfState state;
+	/**
+	 * The number associated with the Elf
+	 */
+	public boolean checkThread;
+	private int number;
+	private Random rand = new Random();
+	private SantaScenario scenario;
+	Semaphore sema = new Semaphore(1);
+
+	public Elf(int number, SantaScenario scenario) {
+		this.number = number;
+		this.scenario = scenario;
+		this.state = ElfState.WORKING;
+		this.checkThread = true;
+	}
+
+
+	public ElfState getState() {
+		return state;
+	}
+
+	/**
+	 * Santa might call this function to fix the trouble
+	 * @param state
+	 */
+	public void setState(ElfState state) {
+		this.state = state;
+	}
+
+
+	@Override
+	public void run() {
+		while (checkThread == true) {
+      // wait a day
+  		try {
+  			Thread.sleep(100);
+  		} catch (InterruptedException e) {
+  			// TODO Auto-generated catch block
+  			e.printStackTrace();
+  		}
+			switch (state) {
+			case WORKING: {
+				// at each day, there is a 1% chance that an elf runs into
+				// trouble.
+				if (rand.nextDouble() < 0.01) {
+					try {
+						System.out.println("\n\n\n\Acquire: " +sema.availablePermits());
+						sema.acquire();
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					state = ElfState.TROUBLE;
+					
+				}
+				break;
+			}
+			case TROUBLE:
+				int num_elves_in_trouble = 0;
+				boolean elves_already_at_door = false;
+				ListIterator<Elf> litr = scenario.elves.listIterator();
+				while(litr.hasNext()) {
+			         Elf elf = (Elf) litr.next();
+			         if(elf.getState().equals(Elf.ElfState.TROUBLE)) {
+			        	 num_elves_in_trouble++;
+			         }
+			         if(elf.getState().equals(Elf.ElfState.AT_SANTAS_DOOR)) {
+			        	 elves_already_at_door = true;
+			         }
+			      }
+				if(num_elves_in_trouble >= 3 && elves_already_at_door == false ) {
+					litr = scenario.elves.listIterator();
+					while(litr.hasNext()) {
+						Elf elf = (Elf) litr.next();
+						if(elf.getState().equals(Elf.ElfState.TROUBLE)) {
+							 sema.release();
+				        	 elf.state = ElfState.AT_SANTAS_DOOR;
+				         }
+					}
+				}
+				break;
+			case AT_SANTAS_DOOR:
+				break;
+			}
+		}
+	}
+
+	/**
+	 * Report about my state
+	 */
+	public void report() {
+		System.out.println("Elf " + number + " : " + state);
+	}
+
+}

@@ -1,0 +1,5 @@
+https://github.com/smcchargs/TAKGM  (World Building Components)
+
+https://github.com/Veran04/TAKGM   (AI Components)
+
+These will be integrated into one repo before the projects completion in December
