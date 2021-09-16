@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- here we input the metadata and implement the title-->
+<head>
+    <meta charset="utf-8"/>
+    <title>Supercharged Gaming</title>
+</head>
+<body>
+    <!--I chose to use my home page to list news about previous events, as well as advertise for upcoming ones-->
+    <h1>Supercharged Gaming</h1>
+    <h2>News</h2>
+    <p>
+        <!--here you will see that I disabled spellchecking since it is a company name, and italicized a player name-->
+        08/27/2021: Congratulations to <i>Wizzrobe</i> for winning the 27th <b spellcheck="false"> 
+            Supercharged Cup,
+        </b>
+        <!--the video is added in here, being careful to consider the pathing. Added in a failsafe message in case their browser does not support mp4-->
+        our Super Smash Bros Melee tournament. Here is a video of the final moments of the event!
+        <video width="320" height="240" controls>
+            <source src="video/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+    </p>
+    <p>
+        09/10/2021: WarioWare Get It Together has officially released! We have plenty of copies in stock, so come on in.
+    </p>
+    <h2>Upcoming Events</h2>
+    <p>
+        <!--used the datetime attribute in order to more properly display in machince language the date -->
+        Our next Super Smash Bros Melee tournament will be held on the following day: <time datetime="2021-09-15">September 15th, 2021. </time>
+    </p>
+    <!--here is links inside a nav out to the other pages of our site-->
+    <nav>
+        <a href="html/Services.html">Products & Services</a> |
+        <a href="html/ContactUs.html">About Us & Contact Information</a> 
+      </nav>
+</body>
+</html>
