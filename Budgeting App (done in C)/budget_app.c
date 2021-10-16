@@ -15,6 +15,8 @@ int main(){
 
     //add a 10% deduction from overall total towards savings once full-time job is acquired
 
+    //the Great Lakes username is Veran99 and the password is my phoenix defense password
+
 
     printf("\nFirst, I will subtract 10 percent towards student loans");
     tempval = income * 0.1;
