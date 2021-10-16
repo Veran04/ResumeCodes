@@ -10,6 +10,12 @@ int main(){
     printf("What is your income this month?");
     scanf(" %s", incomeString);
     income = atoi(incomeString);
+
+    //this 10% will go towards stocks once my loans are paid off
+
+    //add a 10% deduction from overall total towards savings once full-time job is acquired
+
+
     printf("\nFirst, I will subtract 10 percent towards student loans");
     tempval = income * 0.1;
     income -= tempval;
@@ -52,7 +58,7 @@ int main(){
     sum = 0;
     tempval = 5000000;
 
-    printf("\n\nYour remaining money to invest how you see fit is: %d", income);
+    printf("\n\nYour remaining money to invest into student loans and later savings is: %d", income);
 
 }
 
