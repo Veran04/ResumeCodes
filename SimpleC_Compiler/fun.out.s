@@ -1,0 +1,375 @@
+.file "stdin"
+.text
+.globl f
+.type f, @function
+f:
+	push	%rbp
+	mov	%rsp, %rbp
+	sub	$8, %rsp
+	push	%rbx
+	mov	%rdi, -8(%rbp)
+	# push the integer
+	mov	$5, %rax
+	push	%rax
+	pop	%rax
+	pop	%rbx
+	mov	%rbp, %rsp
+	pop	%rbp
+	ret
+.text
+.globl fu
+.type fu, @function
+fu:
+	push	%rbp
+	mov	%rsp, %rbp
+	sub	$8, %rsp
+	push	%rbx
+	mov	%rdi, -8(%rbp)
+	# push the integer
+	mov	$5, %rax
+	push	%rax
+	pop	%rax
+	pop	%rbx
+	mov	%rbp, %rsp
+	pop	%rbp
+	ret
+.text
+.globl fun
+.type fun, @function
+fun:
+	push	%rbp
+	mov	%rsp, %rbp
+	sub	$8, %rsp
+	push	%rbx
+	mov	%rdi, -8(%rbp)
+	# push the integer
+	mov	$5, %rax
+	push	%rax
+	pop	%rax
+	pop	%rbx
+	mov	%rbp, %rsp
+	pop	%rbp
+	ret
+.text
+.globl func
+.type func, @function
+func:
+	push	%rbp
+	mov	%rsp, %rbp
+	sub	$8, %rsp
+	push	%rbx
+	mov	%rdi, -8(%rbp)
+	# push the integer
+	mov	$5, %rax
+	push	%rax
+	pop	%rax
+	pop	%rbx
+	mov	%rbp, %rsp
+	pop	%rbp
+	ret
+.text
+.globl funct
+.type funct, @function
+funct:
+	push	%rbp
+	mov	%rsp, %rbp
+	sub	$8, %rsp
+	push	%rbx
+	mov	%rdi, -8(%rbp)
+	# push the integer
+	mov	$5, %rax
+	push	%rax
+	pop	%rax
+	pop	%rbx
+	mov	%rbp, %rsp
+	pop	%rbp
+	ret
+.text
+.globl functi
+.type functi, @function
+functi:
+	push	%rbp
+	mov	%rsp, %rbp
+	sub	$8, %rsp
+	push	%rbx
+	mov	%rdi, -8(%rbp)
+	# push the integer
+	mov	$5, %rax
+	push	%rax
+	pop	%rax
+	pop	%rbx
+	mov	%rbp, %rsp
+	pop	%rbp
+	ret
+.text
+.globl functio
+.type functio, @function
+functio:
+	push	%rbp
+	mov	%rsp, %rbp
+	sub	$8, %rsp
+	push	%rbx
+	mov	%rdi, -8(%rbp)
+	# push the integer
+	mov	$5, %rax
+	push	%rax
+	pop	%rax
+	pop	%rbx
+	mov	%rbp, %rsp
+	pop	%rbp
+	ret
+.text
+.globl functionnn
+.type functionnn, @function
+functionnn:
+	push	%rbp
+	mov	%rsp, %rbp
+	sub	$8, %rsp
+	push	%rbx
+	mov	%rdi, -8(%rbp)
+	# push the integer
+	mov	$5, %rax
+	push	%rax
+	pop	%rax
+	pop	%rbx
+	mov	%rbp, %rsp
+	pop	%rbp
+	ret
+.text
+.globl main
+.type main, @function
+main:
+	# stack space for argc and argv
+	# emit main's prologue
+	push	%rbp
+	mov	%rsp, %rbp
+	sub	$48, %rsp
+	push	%rbx
+	# move argc and argv from parameter registers to the stack
+	mov	%rdi, -40(%rbp)
+	mov	%rsi, -48(%rbp)
+	# generate code for the body
+	# push the integer
+	mov	$1, %rax
+	push	%rax
+	# push the integer
+	mov	$1, %rax
+	push	%rax
+	pop	%rbx
+	pop	%rax
+	add	%rbx, %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, -24(%rbp)
+	mov	-24(%rbp), %rax
+	push	%rax
+	# push the integer
+	mov	$1, %rax
+	push	%rax
+	pop	%rbx
+	pop	%rax
+	sub	%rbx, %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, -8(%rbp)
+	mov	-24(%rbp), %rax
+	push	%rax
+	mov	-8(%rbp), %rax
+	push	%rax
+	pop	%rbx
+	pop	%rax
+	imul	%rbx, %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, -16(%rbp)
+	mov	-16(%rbp), %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, %rdi
+	call	f
+	push	%rax
+	pop	%rax
+	mov	%rax, -32(%rbp)
+	mov	-32(%rbp), %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, -16(%rbp)
+	mov	-24(%rbp), %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, %rdi
+	call	fu
+	push	%rax
+	pop	%rax
+	mov	%rax, -32(%rbp)
+	mov	-32(%rbp), %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, -24(%rbp)
+	mov	-8(%rbp), %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, %rdi
+	call	fun
+	push	%rax
+	pop	%rax
+	mov	%rax, -32(%rbp)
+	mov	-32(%rbp), %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, -8(%rbp)
+	mov	-16(%rbp), %rax
+	push	%rax
+	mov	-24(%rbp), %rax
+	push	%rax
+	pop	%rbx
+	pop	%rax
+	cdq
+	idiv	%rbx
+	push	%rax
+	# push the integer
+	mov	$10, %rax
+	push	%rax
+	pop	%rbx
+	pop	%rax
+	imul	%rbx, %rax
+	push	%rax
+	# push the integer
+	mov	$10, %rax
+	push	%rax
+	pop	%rbx
+	pop	%rax
+	cdq
+	idiv	%rbx
+	push	%rdx
+	pop	%rax
+	mov	%rax, -8(%rbp)
+	# push the integer
+	mov	$1, %rax
+	push	%rax
+	# push the integer
+	mov	$1, %rax
+	push	%rax
+	pop	%rbx
+	pop	%rax
+	add	%rbx, %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, -24(%rbp)
+	mov	-24(%rbp), %rax
+	push	%rax
+	# push the integer
+	mov	$1, %rax
+	push	%rax
+	pop	%rbx
+	pop	%rax
+	sub	%rbx, %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, -8(%rbp)
+	mov	-16(%rbp), %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, %rdi
+	call	func
+	push	%rax
+	pop	%rax
+	mov	%rax, -32(%rbp)
+	mov	-24(%rbp), %rax
+	push	%rax
+	mov	-8(%rbp), %rax
+	push	%rax
+	pop	%rbx
+	pop	%rax
+	imul	%rbx, %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, -16(%rbp)
+	mov	-16(%rbp), %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, %rdi
+	call	funct
+	push	%rax
+	pop	%rax
+	mov	%rax, -32(%rbp)
+	mov	-24(%rbp), %rax
+	push	%rax
+	# push the integer
+	mov	$2, %rax
+	push	%rax
+	pop	%rbx
+	pop	%rax
+	imul	%rbx, %rax
+	push	%rax
+	# push the integer
+	mov	$3, %rax
+	push	%rax
+	pop	%rbx
+	pop	%rax
+	cdq
+	idiv	%rbx
+	push	%rdx
+	mov	-24(%rbp), %rax
+	push	%rax
+	pop	%rbx
+	pop	%rax
+	cdq
+	idiv	%rbx
+	push	%rax
+	pop	%rax
+	mov	%rax, -16(%rbp)
+	# push the integer
+	mov	$6, %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, %rdi
+	call	functi
+	push	%rax
+	pop	%rax
+	mov	%rax, -8(%rbp)
+	mov	-32(%rbp), %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, -8(%rbp)
+	# push the integer
+	mov	$7, %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, %rdi
+	call	functio
+	push	%rax
+	pop	%rax
+	mov	%rax, -32(%rbp)
+	# push the integer
+	mov	$8, %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, %rdi
+	call	functionnn
+	push	%rax
+	pop	%rax
+	mov	%rax, -8(%rbp)
+	mov	-16(%rbp), %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, -8(%rbp)
+	mov	-24(%rbp), %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, -16(%rbp)
+	mov	-8(%rbp), %rax
+	push	%rax
+	pop	%rax
+	mov	%rax, -24(%rbp)
+	# generate code for the return expression
+	# push the integer
+	mov	$42, %rax
+	push	%rax
+	# save the return expression into %rax per the abi
+	pop	%rax
+	# emit main's epilogue
+	pop	%rbx
+	mov	%rbp, %rsp
+	pop	%rbp
+	ret
