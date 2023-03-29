@@ -1,0 +1,1 @@
+This code compares the most common sorting algorithms able to be used in C in order to demonstrate their effectiveness compared to one another

@@ -1,0 +1,1 @@
+This code implements a binary search tree into C from scratch including all of the necessary functions like searching, traversing in pre vs in vs post order, rebalancing the tree after deletions and more
