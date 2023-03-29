@@ -1,0 +1,1 @@
+This code allows a user to calculate their BMI and associated information and/or weight class. It can be used in either the imperial or metric system

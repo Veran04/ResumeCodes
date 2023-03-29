@@ -1,0 +1,1 @@
+This code implements the Bellman-Ford algorithm for finding the shortest path in a weighted graph. It reads input data from a file, constructs a weighted graph, and calculates the shortest path between a source vertex and all other vertices. After performing the calculations, it outputs the results to an output file with details about the shortest paths and their parent vertices.

@@ -1,0 +1,42 @@
+{
+	"name": "backend",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"start": "node ./server.js",
+		"test": "jest --runInBand --detectOpenHandles ./backend/tests",
+		"test-verbose": "jest --runInBand --verbose --detectOpenHandles ./backend/tests",
+		"test-silent": "jest --runInBand --silent --detectOpenHandles ./backend/tests",
+		"heroku-postbuild": " NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@sendgrid/mail": "^7.4.2",
+		"argon2": "^0.27.1",
+		"body-parser": "^1.19.0",
+		"cookie-parser": "^1.4.5",
+		"cors": "^2.8.5",
+		"crypto-random-string": "^3.3.1",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"jest": "^26.6.0",
+		"joi": "^17.4.0",
+		"joi-objectid": "^3.0.1",
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^5.12.0",
+		"passport": "^0.4.1",
+		"passport-github2": "^0.1.12",
+		"passport-google-oauth20": "^2.0.0",
+		"passport-jwt": "^4.0.0",
+		"passport-microsoft": "^0.1.0"
+	},
+	"jest": {
+		"testEnvironment": "node"
+	},
+	"devDependencies": {
+		"mongodb-memory-server": "^6.9.6",
+		"supertest": "^6.1.3"
+	}
+}

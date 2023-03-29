@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+F:\Java\Santa\.metadata\.plugins\org.eclipse.jdt.core
+301428599.index
+2408839892.index
+1637719032.index
+379235182.index
+4170500674.index

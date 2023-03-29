@@ -1,0 +1,5 @@
+an implementation of a sorted set data structure using a skip list. The SkipListSet class extends the Comparable<T> interface and has methods for adding and removing elements, checking if the list contains a specific element, iterating through the list, and other operations applicable to a sorted set.
+
+It has a few constructors, including one that takes a Collection<T> as an argument and another for creating an empty list. It also contains a reBalance() method to balance the skip list after inserting an element, and equals() and hashCode() methods to compare two skip lists for equality.
+
+The class also has an inner class SkipListSetItem that defines the nodes of the skip list, and another inner class SkipListSetIterator that implements an iterator for iterating through the elements of the skip list.
